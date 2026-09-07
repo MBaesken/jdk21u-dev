@@ -954,12 +954,10 @@ AC_DEFUN([JDKOPT_SETUP_MACOSX_SIGNING],
 # compilation steps, after linking.
 # Parameter is the path to the script to be called.
 #
-# DEFAULT: "", leads to a failure, for TYPE: executable
-# TYPE: string, and DEFAULT: [], works
 AC_DEFUN([JDKOPT_SETUP_SIGNING_HOOK],
 [
-  UTIL_ARG_WITH(NAME: signing-hook, TYPE: string,
-      OPTIONAL: true, DEFAULT: [],
+  UTIL_ARG_WITH(NAME: signing-hook, TYPE: executable,
+      OPTIONAL: true, DEFAULT: "",
       DESC: [specify path to script used to code sign native binaries]
   )
 
